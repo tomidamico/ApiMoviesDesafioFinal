@@ -15,7 +15,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	List<Movie> findTitle(@Param("title") String title);
 
 	// filtrar los populares
-	@Query("SELECT m FROM  Movie m ORDER BY m.rate DESC")
+	@Query("SELECT m FROM Movie m ORDER BY m.rate DESC")
 	List<Movie> findPopular(PageRequest pageRequest);
 
 	// filtrar por clasificación

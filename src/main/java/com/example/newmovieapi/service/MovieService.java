@@ -58,7 +58,12 @@ public class MovieService {
 
 	// Busca una pelicula por su ID
 	public Optional<Movie> findId(Integer id) {
-		return movieRepository.findById(id);
+		Optional<Movie> peliToFind = movieRepository.findById(id);
+		if (!peliToFind.isEmpty()) {
+			return peliToFind;
+		} else {
+			throw new RuntimeException("No existe la pelicula a eliminar");
+		}
 	}
 
 	// Busca una pelicula por su titulo

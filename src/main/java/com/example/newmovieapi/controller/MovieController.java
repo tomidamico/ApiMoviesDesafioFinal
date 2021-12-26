@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RequestMapping("apiMovie/v1")
 @RestController
+@CrossOrigin(origins = "https://localhost:8080")
 public class MovieController {
 
 	private final MovieService movieService;
