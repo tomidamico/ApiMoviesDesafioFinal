@@ -62,7 +62,7 @@ public class MovieService {
 		if (!peliToFind.isEmpty()) {
 			return peliToFind;
 		} else {
-			throw new RuntimeException("No existe la pelicula a eliminar");
+			throw new RuntimeException("No existe la pelicula");
 		}
 	}
 
